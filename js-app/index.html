@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+
+    <section>
+        <img class="falling-bean" src="images/bean-removebg-preview.png" alt="" />
+        <section class="get-beans">
+            <nav>
+                <h1>Rob's Coffee Beans</h1>
+                <section>
+                    <button id="run-button">See Beans</button>
+                    <div>See our selection of beans!</div>
+                </section>
+                <section>
+                    <button id="add-button">Add A Bean</button>
+                    <div>Generate a form for new bean entries!</div>
+                </section>
+                <div onclick="test2()">test</div>
+            </nav>
+
+            <section id="beans">
+                <div id="display"></div>
+                <form id="newBeanForm">
+                    <h2>Enter A New Bean</h2>
+                    <section>
+                        <label for="formName">Name: </label>
+                        <input id="formName" class="beanForm formName" type="text" value="" />
+                        <label for="formRegion">Region: </label>
+                        <input id="formRegion" class="beanForm formRegion" type="text" value="" />
+                        <label for="formNotes">Notes: </label>
+                        <input id="formNotes" class="beanForm formNotes" type="text" value="" />
+                        <input id="submit" type="submit" value="Submit" />
+                    </section>
+                    <div id="formResults"></div>
+                </form>
+            </section>
+        </section>
+
+    </section>
+    <img class="bean-bckgrnd" src="images/beanbackground-removebg-preview.png" alt="" />
+    <script src="main.js"></script>
+</body>
+
+</html>
