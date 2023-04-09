@@ -7,8 +7,7 @@
 </head>
 
 <body>
-
-
+    <div id="preview"></div>
     <section>
         <img class="falling-bean" src="images/bean-removebg-preview.png" alt="" />
         <section class="get-beans">
@@ -22,11 +21,11 @@
                     <button id="add-button">Add A Bean</button>
                     <div>Generate a form for new bean entries!</div>
                 </section>
-                <div onclick="test2()">test</div>
             </nav>
-
             <section id="beans">
-                <div id="display"></div>
+
+                <div id="display">
+                </div>
                 <form id="newBeanForm">
                     <h2>Enter A New Bean</h2>
                     <section>
@@ -35,7 +34,7 @@
                         <label for="formRegion">Region: </label>
                         <input id="formRegion" class="beanForm formRegion" type="text" value="" />
                         <label for="formNotes">Notes: </label>
-                        <input id="formNotes" class="beanForm formNotes" type="text" value="" />
+                        <textarea id="formNotes" class="beanForm formNotes" type="text" value=""></textarea>
                         <input id="submit" type="submit" value="Submit" />
                     </section>
                     <div id="formResults"></div>
