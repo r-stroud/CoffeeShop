@@ -45,7 +45,7 @@ nav {
     max-width: 500px;
     width: 40vw;
     min-width: 105px;
-    margin-right: 30px;
+    margin-right: 2vw;
 }
 
 nav section {
@@ -72,13 +72,29 @@ h1 {
 }
 
 #beans {
-    width: 800px;
+    width: 700px;
     margin: 20px auto 0;
-    /* position: relative; */
     z-index: 300;
-    height: 95.5vh;
+    height: fit-content;
+    max-height: 90vh;
     overflow-y: scroll;
     border-radius: 5px;
+    opacity: .9;
+    padding-top: 50px;
+}
+
+#displayHeader {
+    width: inherit;
+    text-align: center;
+    color: rgb(88, 60, 60);
+    font-style: italic;
+    position: fixed;
+    top: 1px;
+    padding: 15px 0 15px;
+    background-color: rgba(241, 183, 111, 0.784);
+    z-index: 100;
+    opacity: 1.0;
+    border-radius: 5px 5px 0 0;
 }
 
 #beans::-webkit-scrollbar {
@@ -110,12 +126,12 @@ body::-webkit-scrollbar {
 nav button,
 .get-beans button,
 .bean-bttns div,
-#submit {
+#submit,
+.confirmation-bttns div {
     margin-right: 15px;
     background-color: #e8bb99;
     color: rgb(88, 60, 60);
     font-weight: 550;
-    /* font-style: italic; */
     font-size: 16px;
     border: 2px solid rgb(88, 60, 60);
     border-radius: 5px;
@@ -127,7 +143,8 @@ nav button,
 nav button:hover,
 .get-beans button:hover,
 .bean-bttns div:hover,
-#submit:hover {
+#submit:hover,
+.confirmation-bttns div:hover {
     color: #e8bb99;
     background-color: rgb(88, 60, 60);
 }
@@ -137,12 +154,10 @@ nav button:hover,
     flex-direction: row;
     align-items: start;
     flex-wrap: wrap;
-    justify-content: start;
-    width: 800px;
+    justify-content: center;
+    width: inherit;
     overflow-y: scroll;
-    /* position: relative; */
     z-index: 500;
-    /* margin-left: 30px; */
 }
 
 #display::-webkit-scrollbar {
@@ -226,46 +241,51 @@ nav button:hover,
 form {
     padding: 15px 5px 100px;
     width: 450px;
-    /* margin: auto; */
-    /* margin-left: 30px; */
     position: relative;
-    /* bottom: 400px; */
     display: none;
     z-index: 200;
-
+    margin-left: 7vw;
 }
 
 form h2 {
-    /* text-align: center; */
     color: #e8bb99;
     font-style: italic;
     font-size: 28px;
     width: 60%;
-    margin: 0 auto 10px;
+    margin: 0 auto 20px;
     border-bottom: 2px solid rgb(251, 225, 194);
-
+    text-align: center;
 
 }
 
 form label {
     color: #e8bb99;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 
 form section {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 80%;
     max-width: 400px;
     margin: auto;
 }
 
 form input {
-    margin-bottom: 10px;
-    height: 25px;
+    margin-bottom: 20px;
+    height: 35px;
     font-style: italic;
     color: rgb(88, 60, 60);
-    font-size: 16px;
+    font-size: 20px;
+}
+
+form textarea {
+    height: 100px;
+    color: rgb(88, 60, 60);
+    font-size: 20px;
+    resize: vertical;
+    margin-bottom: 20px;
 }
 
 #formResults {
@@ -277,9 +297,51 @@ form input {
     width: fit-content;
     background-color: rgb(255, 241, 220);
     margin: auto;
-    padding: 10px 15px;
-    position: relative;
-    bottom: 153px;
+    padding: 80px;
+    position: fixed;
+    top: 15%;
+    left: 36.8%;
     font-size: 24px;
-    font-style: italic;
+}
+
+#formResults div {
+    margin: 20px;
+}
+
+#formResults span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.results-header {
+    font-size: 30px;
+    border-bottom: 2px solid rgb(88, 60, 60);
+
+}
+
+#preview {
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    top: 40%;
+    left: 32%;
+    border: 2px solid #e8bb99;
+    padding: 50px;
+    background-color: rgb(255, 241, 220);
+    box-shadow: 2px 2px 10px 2px rgb(49, 49, 49);
+    color: rgb(88, 60, 60);
+    border-radius: 5px;
+}
+
+#preview p {
+    font-size: 24px;
+}
+
+#preview span {
+    color: rgb(154, 7, 7);
+    font-weight: bold;
+}
+
+.confirmation-bttns {
+    display: flex;
 }
