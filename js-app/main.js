@@ -1,24 +1,26 @@
+
 const url = "https://localhost:7025/api/beanvariety/";
 
 let clickable = true;
 
+
+// sets background styles when displaying all beans
 function setBackground(id) {
-    document.getElementById(id).style.border = "1px solid white"
-    document.getElementById(id).style.backgroundColor = "rgba(241, 183, 111, 0.784)"
-    document.getElementById(id).style.boxShadow = "2px 2px 8px 2px rgb(215, 215, 215)"
+    document.getElementById(id).style.boxShadow = "0px 0px 2px 0px rgb(215, 215, 215)"
 }
 
+// removes background styles from displaying all beans
 function removeBackground(id) {
-    document.getElementById(id).style.border = "none"
-    document.getElementById(id).style.background = "none"
     document.getElementById(id).style.boxShadow = "none"
 }
 
+// displays all beans
 const button = document.querySelector("#run-button");
 button.addEventListener("click", () => {
     showBeans()
 });
 
+// displays create new bean form
 const addButton = document.querySelector("#add-button");
 addButton.addEventListener("click", () => {
     if (clickable) {
@@ -29,13 +31,13 @@ addButton.addEventListener("click", () => {
     }
 })
 
+// creates a new bean and displays messaging for invalid entry / confirmation
 
 const submit = document.getElementById("submit");
 submit.addEventListener("click", (event) => {
     event.preventDefault()
 
     let Name = document.getElementById("formName").value
-    console.log(Name.value)
     let Region = document.getElementById("formRegion").value
     let Notes = document.getElementById("formNotes").value
 
@@ -70,7 +72,6 @@ submit.addEventListener("click", (event) => {
         document.getElementById("formRegion").value = "";
         document.getElementById("formNotes").value = "";
     }
-
 })
 
 function getAllBeanVarieties() {
@@ -106,6 +107,7 @@ function deleteBean(id) {
 
 }
 
+// delete confirmation pop-up
 function deleteForm(id) {
     document.getElementById("preview").style.display = "block";
     document.getElementById("preview").innerHTML = `
@@ -115,11 +117,12 @@ function deleteForm(id) {
     <div onclick="deleteBean(${id})" id="deleteBttn">Delete</div>
     </div>`
 }
-
+// closes delete confirmation pop-up
 function closeForm() {
     document.getElementById("preview").style.display = "none"
 }
 
+// displays all beans
 function showBeans() {
     let beans = getAllBeanVarieties()
     if (clickable) {

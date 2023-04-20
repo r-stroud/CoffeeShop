@@ -42,10 +42,9 @@ nav {
     font-size: 30px;
     height: 100%;
     z-index: 500;
-    max-width: 500px;
-    width: 40vw;
-    min-width: 105px;
-    margin-right: 2vw;
+    max-width: 475px;
+    width: 30vw;
+    min-width: 175px;
 }
 
 nav section {
@@ -72,15 +71,14 @@ h1 {
 }
 
 #beans {
-    width: 700px;
-    margin: 20px auto 0;
+    position: relative;
+    width: 60vw;
+    margin: 5vh auto;
     z-index: 300;
     height: fit-content;
     max-height: 90vh;
     overflow-y: scroll;
     border-radius: 5px;
-    opacity: .9;
-    padding-top: 50px;
 }
 
 #displayHeader {
@@ -90,10 +88,9 @@ h1 {
     font-style: italic;
     position: fixed;
     top: 1px;
-    padding: 15px 0 15px;
-    background-color: rgba(241, 183, 111, 0.784);
+    padding: 15px 1px 15px;
+    background-color: rgba(241, 183, 111);
     z-index: 100;
-    opacity: 1.0;
     border-radius: 5px 5px 0 0;
 }
 
@@ -150,6 +147,7 @@ nav button:hover,
 }
 
 #display {
+    margin: 50px 0;
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -165,8 +163,7 @@ nav button:hover,
 }
 
 .container {
-    border: 2px solid rgb(249, 234, 216);
-    box-shadow: 2px 2px 10px 2px rgb(88, 60, 60);
+    border: 4px solid rgb(249, 234, 216);
     width: 300px;
     height: 280px;
     margin: 10px 10px;
@@ -239,21 +236,25 @@ nav button:hover,
 }
 
 form {
+    margin-top: -110px;
     padding: 15px 5px 100px;
-    width: 450px;
+    width: 45vw;
     position: relative;
     display: none;
     z-index: 200;
-    margin-left: 7vw;
 }
 
 form h2 {
-    color: #e8bb99;
+    background-color: rgba(241, 183, 111);
+    color: rgb(88, 60, 60);
+    padding: 5px 0;
+    border-radius: 5px;
     font-style: italic;
     font-size: 28px;
+    max-width: 350px;
+    min-width: 250px;
     width: 60%;
     margin: 0 auto 20px;
-    border-bottom: 2px solid rgb(251, 225, 194);
     text-align: center;
 
 }
@@ -294,13 +295,15 @@ form textarea {
     border: 1px solid #e8bb99;
     color: rgb(88, 60, 60);
     box-shadow: 2px 2px 10px 2px rgb(49, 49, 49);
-    width: fit-content;
+    width: inherit;
+    max-width: 400px;
+    min-width: 250px;
     background-color: rgb(255, 241, 220);
     margin: auto;
-    padding: 80px;
-    position: fixed;
-    top: 15%;
-    left: 36.8%;
+    padding: 45px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 380px;
     font-size: 24px;
 }
 
@@ -320,13 +323,14 @@ form textarea {
 }
 
 #preview {
+    margin-right: 6vw;
     display: none;
     position: fixed;
     z-index: 5000;
     top: 40%;
-    left: 32%;
+    left: 40%;
     border: 2px solid #e8bb99;
-    padding: 50px;
+    padding: 20px;
     background-color: rgb(255, 241, 220);
     box-shadow: 2px 2px 10px 2px rgb(49, 49, 49);
     color: rgb(88, 60, 60);
